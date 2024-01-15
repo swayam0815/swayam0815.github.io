@@ -1,0 +1,518 @@
+:root {
+    --purple: #B1AFFF;
+    --green: #1b4332;
+    --lightGreen: #d4fadd;
+}
+
+* {
+    color: var(--green);
+    font-family: 'Carme', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: var(--green);
+    background: radial-gradient(circle, var(--lightGreen) 56%, rgba(244, 249, 245, 1) 100%);
+}
+
+.under-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.under-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1vh;
+    bottom: 0;
+    border-radius: 25px;
+    left: 0;
+    background-color: #ffb700;
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+}
+
+.under-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: inherit;
+    height: 100vh;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+}
+
+#content {
+    width: 80vw;
+    height: 100vh;
+}
+
+#title h1 {
+    font-size: 12vw;
+}
+
+h4 {
+    font-size: 5vw;
+}
+
+#btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+#title,
+#about,
+#overview {
+    transition: transform .4s, visibility .4s, opacity .1s;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5vw;
+    height: 3.5vw;
+    border: .5vw solid var(--purple);
+    transform: rotate(45deg);
+    border-radius: 1vw;
+    transition: transform 300ms, border-radius 1s;
+}
+
+.inner {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    transform: rotate(90deg);
+    border-radius: 0;
+    border: .5vw solid var(--green);
+    border-radius: 1vw;
+}
+
+.btn:hover>.inner {
+    background-color: var(--green);
+    border: var(--green);
+}
+
+.selected {
+    border: .5vw solid var(--green);
+    transform: rotate(90deg);
+    border-radius: 0px;
+    color: var(--green);
+}
+
+.btn.selected>.inner {
+    background-color: var(--green);
+    border: var(--green);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(+100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slide {
+    animation: slide-up .4s ease-out;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.slide-down {
+    animation: slide-down .4s ease-out;
+}
+
+.special-links {
+    text-decoration: underline var(--green);
+    padding: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.links:hover {
+    box-sizing: border-box;
+    background-color: #c8c6ff;
+    color: var(--green);
+    text-decoration: underline #c8c6ff;
+    border-radius: 5px;
+}
+
+.special {
+    font-weight: bold;
+}
+
+#western {
+    font-weight: bold;
+    color: #b55bff;
+}
+
+#western a:active,
+#western a:visited {
+    font-weight: bold;
+    color: #b55bff;
+}
+
+#western a:hover {
+    box-sizing: border-box;
+    background-color: rgba(187, 136, 255, 0.3);
+    text-decoration: underline #b55bff;
+    border-radius: 5px;
+}
+
+.special {
+    color: navy;
+}
+
+#special {
+    color: darkvar(--green);
+    font-weight: bold;
+}
+
+.red {
+    color: #ffa200;
+    font-weight: bold;
+}
+
+.clr {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.7vw;
+    line-height: 5vh;
+}
+
+.var {
+    animation: flicker 2s infinite;
+}
+
+.underline:after {
+    content: "";
+    float: left;
+    background: var(--green);
+    width: 100%;
+    height: 1vw;
+    margin: 1vw;
+    margin-left: 0;
+    border-radius: 5vw;
+}
+
+.underlines:after {
+    content: "";
+    float: left;
+    background: var(--green);
+    width: 100%;
+    height: .5vw;
+    margin-bottom: 5vh;
+    border-radius: 5vw;
+}
+
+@counter-style lightning {
+    system: cyclic;
+    symbols: "\26A1";
+    suffix: " ";
+}
+
+ul {
+    list-style: lightning;
+    list-style-position: outside;
+}
+
+li {
+    margin: 1.5vw;
+}
+
+ul li::marker {
+    font-size: 2vw;
+    /* Adjust the size as desired */
+}
+
+#nav-menu {
+    box-sizing: border-box;
+    background: #B1AFFF;
+    background: radial-gradient(circle, #B1AFFF 0%, rgba(255, 255, 255, 1) 100%);
+    position: absolute;
+    z-index: 2;
+    border-radius: 2vw;
+    width: 25vw;
+    height: auto;
+    border: .7vw solid #B1AFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu {
+    box-sizing: border-box;
+    background: #B1AFFF;
+    background: radial-gradient(circle, #B1AFFF 0%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 1.4vw;
+    width: inherit;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5vw;
+    z-index: 2;
+}
+
+nav a,
+nav a:visited {
+    color: black;
+    text-decoration: none;
+    padding: 2vh;
+}
+
+#menu-button {
+    position: absolute;
+    z-index: 5;
+    width: 4vw;
+    height: 4vw;
+    margin: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid .3vw var(--green);
+    border-radius: .5vw;
+    background-color: var(--lightGreen);
+}
+
+#menu-button:hover {
+    background-color: var(--green);
+}
+
+#menu-button:hover>.line {
+    border: solid 0.3vw var(--lightGreen);
+}
+
+.line,
+.line2 {
+    width: 3vw;
+    border: solid .3vw var(--green);
+    border-radius: .5vw;
+    margin: .3vw;
+    transition: transform 300ms;
+}
+
+.line2:nth-child(1) {
+    transform: translateY(100%) rotate(45deg);
+    border: solid 0.3vw var(--lightGreen);
+}
+
+.line2:nth-child(2) {
+    transform: translateY(-100%) rotate(-45deg);
+    border: solid 0.3vw var(--lightGreen);
+}
+
+#x-button {
+    position: absolute;
+    z-index: 1;
+    width: 4vw;
+    height: 4vw;
+    margin: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid .3vw var(--green);
+    border-radius: .5vw;
+    background-color: var(--green);
+}
+
+#menu {
+    position: relative;
+}
+
+#made {
+    font-size: 1vw;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2vh;
+}
+
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    width: inherit;
+    height: 50%;
+}
+
+.project img {
+    width: 75%;
+    border-radius: 2vw;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+.project img:not(:hover) {
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+#rr:hover {
+    box-shadow: 0 0 10px red, 0 0 40px blueviolet, 0 0 80px pink;
+}
+
+#rt:hover {
+    box-shadow: 0 0 10px black, 0 0 40px black, 0 0 80px black;
+}
+
+#pl:hover {
+    box-shadow: 0 0 10px green, 0 0 40px darkgreen, 0 0 80px greenyellow;
+}
+
+
+/* pulsing keyframe animation */
+
+@media (max-width: 768px) {
+    .underlines:after {
+        margin-bottom: 1vh;
+    }
+    p {
+        line-height: 5vh;
+        font-size: 5vw;
+    }
+    h4 {
+        font-size: 5vw;
+    }
+    #title h1 {
+        font-size: 12vw;
+    }
+    nav {
+        font-size: 3.5vh;
+    }
+    .btn {
+        width: 6vw;
+        height: 6vw;
+        border: .5vw solid var(--purple);
+        transform: rotate(45deg);
+        border-radius: 1vw;
+    }
+    .inner {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+    #nav-menu {
+        border-radius: 2vw;
+        width: 30vw;
+        height: auto;
+        border: .7vw solid #B1AFFF;
+    }
+    #menu {
+        border-radius: 1.4vw;
+        width: inherit;
+        height: 35.5vh;
+    }
+    nav {
+        font-size: 6vw;
+        z-index: 2;
+    }
+    nav a,
+    nav a:visited {
+        color: #ffb700;
+        text-decoration: none;
+        padding: 1.5vh;
+    }
+    #made {
+        font-size: 1.5vw;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+    }
+    .under-animation::after {
+        height: 1vw;
+    }
+    #menu-button,
+    #x-button {
+        width: 6vw;
+        height: 6vw;
+        margin: 2vw;
+        border: solid .3vw var(--green);
+    }
+    .line,
+    .line2 {
+        width: 4vw;
+        border: solid .4vw var(--green);
+        border-radius: .5vw;
+        transition: transform 300ms;
+    }
+    #projects {
+        flex-direction: column;
+        margin: 2vh;
+    }
+    .project {
+        width: 60%;
+    }
+}
