@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -41,15 +40,8 @@ const Hero = () => {
                   <span className="inline-block underline text-red-50">
                     <Link
                       href="https://www.google.com/search?q=gruntled+meaning"
-                      passHref
-                      legacyBehavior
-                    >
-                      <a target="_blank" rel="noopener noreferrer">
-                        <Arrow text="Gruntled," className="border-b-2"/>
-                      </a>
-                    </Link>
-                  </span>
-                   Full Stack Developer.
+                    target="_blank" rel="noopener noreferrer"
+                    >Gruntled </Link></span> Full Stack Developer.
                 </h2>
               </TextGenerateEffect>
               <TextGenerateEffect
@@ -81,7 +73,7 @@ const Hero = () => {
                 </Link>
               </div>
               <div className="flex items-center justify-center h-10 gap-2 my-8 w-full ">
-                  <Button button={true} text=""/>
+                <Button button={true} text="" />
 
                 <Tooltip text="Github">
                   <Link
@@ -98,8 +90,10 @@ const Hero = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <BiLogoLinkedin className="
-                     border-sky-500 rounded-full p-2 border-2 h-14 w-14 fill-sky-500 hover:bg-sky-500 hover:fill-black-100 transition-all duration-300" />
+                    <BiLogoLinkedin
+                      className="
+                     border-sky-500 rounded-full p-2 border-2 h-14 w-14 fill-sky-500 hover:bg-sky-500 hover:fill-black-100 transition-all duration-300"
+                    />
                   </Link>
                 </Tooltip>
               </div>

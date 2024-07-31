@@ -6,9 +6,9 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id="about" className="w-full px-20 flex">
-      <div className="w-full py-20 flex flex-col lg:flex-row justify-between">
-        <div className="heading mb-10 w-full lg:w-1/2 flex flex-col gap-3.5 items-start">
+    <section id="about" className="w-full px-10 lg:px-20 flex">
+      <div className="w-full  py-20 flex flex-col lg:flex-row justify-between">
+        <div className="heading mb-10 w-full  lg:w-1/2 flex flex-col gap-3.5 items-start">
           <h1>
             Hey, I&apos;m <span className="text-yellow-400">Swayam!</span>
           </h1>
@@ -49,7 +49,7 @@ const About = () => {
             to see what I&apos;m reading!
           </p>
         </div>
-        <div className="mx-6 py-4 w-full lg:w-1/2 flex flex-col items-end gap-4">
+        <div className=" py-4 px-2 w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-4 ">
           <div className="w-96 flex gap-5 flex-col border-2 border-white/[0.2] px-2 rounded-lg py-4">
             <h1 className="text-2xl font-bold pl-3">Known Languages</h1>
             <div className="flex flex-wrap gap-x-3 gap-y-2 items-center justify-center">
