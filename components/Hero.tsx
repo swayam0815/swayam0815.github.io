@@ -41,7 +41,7 @@ const Hero = () => {
                     <Link
                       href="https://www.google.com/search?q=gruntled+meaning"
                     target="_blank" rel="noopener noreferrer"
-                    >Gruntled </Link></span> Full Stack Developer.
+                    >Gruntled </Link></span>, Full Stack Developer.
                 </h2>
               </TextGenerateEffect>
               <TextGenerateEffect

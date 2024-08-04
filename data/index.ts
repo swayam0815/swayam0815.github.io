@@ -194,6 +194,15 @@ export const myProjects = [
     color: " border-teal-500 hover:shadow-teal-500",
     link: "https://medi-time.vercel.app/",
     moreLink: "https://github.com/swayam0815/Medi-Time",
+  }, {
+    id: 5,
+    title: "Docs-Clone",
+    body: "A full Google Docs clone, featuring a real-time collaborative document editor. It allows multiple users to edit a document simultaneously, with changes reflected in real-time. The project includes database storage for saving documents and offers sharing permissions, allowing users to set view or edit access for others.",
+    images: ["/soon.png"],
+    iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg"],
+    color: " border-blue-500 hover:shadow-blue-500",
+    link: "https://sway-docs.vercel.app/",
+    moreLink: "https://github.com/swayam0815/sway-docs",
   },
 
   {
@@ -203,8 +212,8 @@ export const myProjects = [
     images: ["/nike.png"],
     iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg"],
     color: " border-orange-500 hover:shadow-orange-500",
-    link: "https://swayam0815.github.io/Nike-App/",
-    moreLink: "https://github.com/swayam0815/Nike-App",
+    link: "https://swayam0815.github.io/nike-app/",
+    moreLink: "https://github.com/swayam0815/nike-app",
   },
   {
     id: 4,
@@ -216,16 +225,7 @@ export const myProjects = [
     link: "https://sway-works.vercel.app/",
     moreLink: "https://github.com/swayam0815/swayam-works",
   },
-  {
-    id: 5,
-    title: "Docs-Clone",
-    body: "A Google Docs clone, featuring a real-time collaborative document editor. It allows multiple users to edit a document simultaneously, with changes reflected in real-time. The project also allows users to save their docs to a database for future access.",
-    images: ["/soon.png"],
-    iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg"],
-    color: " border-blue-500 hover:shadow-blue-500",
-    link: "https://github.com/swayam0815",
-    moreLink: "https://github.com/swayam0815",
-  },
+ 
   {
     id: 4,
     title: "Project Lamda",
