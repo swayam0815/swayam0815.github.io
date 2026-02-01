@@ -20,13 +20,11 @@ const topics = [
 export default function About() {
     return (
         <>
-            <div id="triggered" className={`h-[110svh] w-screen flex flex-col items-center pt-40`}>
-                <div className=" w-[80%] h-max flex flex-col items-center justify-center">
+            <div id="triggered" className={`h-max min-h-screen w-screen flex  flex-col items-center `}>
+                <div className="w-[85%] lg:w-[80%] pt-25 md:pt-32 lg:pt-56 px-5">
                     <h1 className={`${rubikMono.className}  w-full text-6xl lg:text-8xl mb-7`}>About</h1>
-
-
                     <div className=" w-full  flex flex-col lg:flex-row gap-10 items">
-                        <div className="w-full font-semibold lg:w-1/2 text-md md:text-lg lg:text-xl text-foreground text-justify pr-8 leading-10 ">Hey there, I&apos;m Swayam Sachdeva. I&apos;m a full stack developer
+                        <div className="w-full font-semibold lg:w-1/2 text-md md:text-lg lg:text-xl text-foreground text-justify lg:pr-8 leading-10 ">Hey there, I&apos;m Swayam Sachdeva. I&apos;m a full stack developer
                             that loves to work with various technologies and tech stacks. I love
                             to constantly challenge myself and strive to find new opportunites
                             to apply myself. Whether it be exploring a new area of software
@@ -50,8 +48,8 @@ export default function About() {
                         </div>
                     </div>
 
-
                 </div>
+                <div className="w-full h-20"></div>
             </div>
 
         </>

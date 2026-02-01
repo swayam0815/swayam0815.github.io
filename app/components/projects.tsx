@@ -24,7 +24,7 @@ export default function Project() {
         <>
             <div className={`min-h-screen h-max w-screen  flex flex-col items-center justify-center`}>
                 <div className=" w-[80%] h-max pt-40 flex flex-col items-start justify-center">
-                    <h1 className={`${rubikMono.className} mb-20 w-full text-6xl lg:text-8xl`}>Projects</h1>
+                    <h1 className={`${rubikMono.className} mb-20 w-full text-5xl md:text-6xl lg:text-7xl`}>Projects</h1>
 
                     <div className="w-full lg:w-[80%] h-full items-start flex flex-col gap-9">
                         {
@@ -32,7 +32,7 @@ export default function Project() {
                                 (p, i) => {
                                     return (
                                         <div className={`w-full py-4 flex flex-col gap-3 border-b-2 my-2`} key={i}>
-                                            <h1 className="text-5xl  font-semibold">{p.title}</h1>
+                                            <h1 className="text-3xl md:text-5xl font-semibold">{p.title}</h1>
                                             <p className="font-medium">{p.body}</p>
 
                                             <div className="flex items-center justify-between w-full  min-h-2">
@@ -44,7 +44,7 @@ export default function Project() {
                                                         p.demo && <a target="_blank" rel="noopener" className="underline" href={p.demo}>Demo</a>
                                                     }
                                                 </div>
-                                                <div className="text-sm w-7/12 lg:w-1/2 flex-wrap justify-end opacity-80 font-medium flex gap-2">
+                                                <div className="text-sm w-1/2 flex-wrap justify-end opacity-80 font-medium flex gap-2">
                                                     {
                                                         p.tech && p.tech.map(
                                                             (t, j) => {
