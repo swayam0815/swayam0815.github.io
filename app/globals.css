@@ -42,10 +42,17 @@ html.lenis body {
   transition-behavior: allow-discrete;
 }
 
+
 :root {
-  --background: #001d3d;
-  --foreground: #ffc300;
+  --background: #260244;
+  --foreground: #c1bffc;
 }
+
+
+/* 
+v2: background: #d4fadd
+    foreground: 1b4332
+*/
 
 /*   --background: #fbf6f5;
 --foreground: #3c3c3c;
@@ -62,6 +69,7 @@ html.lenis body {
     --foreground: #1e2425;
   }
 } */
+
 
 
 body {
